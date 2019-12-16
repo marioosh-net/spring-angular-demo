@@ -1,1 +1,21 @@
-<app-list></app-list>
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" routerLink="/"><span class="home nooutline" (click)="isNavbarCollapsed=true">Demo</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation" (click)="isNavbarCollapsed = !isNavbarCollapsed" [attr.aria-expanded]="!isNavbarCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" >
+      <div class="navbar-nav mr-auto">
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0 main">
+  <div class="container">
+  	<app-list></app-list>
+  </div>
+</main>
+

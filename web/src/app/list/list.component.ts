@@ -22,6 +22,10 @@ export class ListComponent implements OnInit {
   	});  	
   }
 
+  delete(bookId:number) {
+    this.restService.delete(bookId).subscribe(res => this.loadBooks());
+  }
+
   onSave(book:any) {
   	this.loadBooks();
   }

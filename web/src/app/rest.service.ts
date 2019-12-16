@@ -14,6 +14,10 @@ export class RestService {
   	return this.http.get<any>(this.API_PREFIX+'/api/books')
   }
 
+  delete(id:number) {
+  	return this.http.delete<any>(this.API_PREFIX+'/api/books/'+id)
+  }  
+
   save(book:any) {
 		return this.http.post<any>(this.API_PREFIX+'/api/books', book);
   }
