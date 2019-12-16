@@ -1,0 +1,6 @@
+<app-form (onSave)="onSave($event)"></app-form>
+
+<h2>List</h2>
+<ul>
+	<li *ngFor="let book of books">{{book.title}}: {{book.author}}</li>
+</ul>
